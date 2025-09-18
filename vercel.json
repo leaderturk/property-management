@@ -6,7 +6,7 @@
   },
   "rewrites": [
     {
-      "source": "/api/(.*)", 
+      "source": "/api/(.*)",
       "destination": "/api/server.ts"
     },
     {
@@ -14,7 +14,7 @@
       "destination": "/index.html"
     }
   ],
-  "buildCommand": "npm run build",
+  "buildCommand": "cd client && npx vite@5.4.19 build --outDir ../dist/public && cd .. && npx esbuild@0.25.0 server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
   "outputDirectory": "dist/public",
   "installCommand": "npm install"
 }
