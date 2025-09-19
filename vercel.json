@@ -15,6 +15,6 @@
     }
   ],
   "installCommand": "npm ci",
-  "buildCommand": "npx vite@5.4.19 build && npx esbuild@0.25.0 server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist/public"
 }
